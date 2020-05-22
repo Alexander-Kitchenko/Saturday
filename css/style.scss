@@ -1,16 +1,21 @@
-
+@import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css);
+@import url(../fontawesome-free-5.0.8/web-fonts-with-css/css/fa-brands.css);
 @import "bootstrap-theme.css";
 @import "bootstrap.min.css";
 @import "media-queries.css";
 @import "owl.carousel.min.css";
 @import "owl.theme.default.min.css";
+
+
+
 $font-family-primary: "Open Sans", sans-serif;
 $font-weight-400: 400;
 $font-weight-600: 600;
 $primary-color: #ffffff;
 $blue-color: #484c55;
-$font-family-Awesome: 'Font Awesome 5 Free';
+$font-family-Awesome: "Font Awesome 5 Free";
 $font-weight-900: 900;
+$font-family-Awesome-Brands:"Font Awesome 5 Brands", sans-serif;
 
 
 @mixin max-screen($number) {
@@ -65,10 +70,41 @@ $font-weight-900: 900;
       font-weight: $font-weight-400;
       font-size: 15px;
       display: inline-block;
-      padding: 15px 15px;
+      padding: 43px 28px;
       &:hover {
         color:#49cbcd;
         background-color: #f8f9fb;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-default {
+    background-color: white;
+    border: none;
+    .navbar-nav li {
+      &:after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0;
+        background-color: #49cbcd;
+        transition: 0.5s;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+      a {
+        font-family:$font-family-primary ;
+        font-weight: $font-weight-400;
+        font-size: 15px;
+        display: inline-block;
+        padding: 15px 15px;
+        &:hover {
+          color:#49cbcd;
+          background-color: #f8f9fb;
+        }
       }
     }
   }
@@ -333,24 +369,22 @@ h2 {
 .contact_social a:first-child:first-child:before {
   content: "\f39e";
   display: inline-block;
-  font-family: $font-family-Awesome;
-  font-weight:$font-weight-900;
+  font-family: $font-family-Awesome-Brands ;
 }
 .contact_social a:nth-child(2) {
   background-color: #3ec2f3; }
 .contact_social a:nth-child(2):nth-child(2):before {
   content: "\f099";
   display: inline-block;
-  font-family: $font-family-Awesome;
-  font-weight:$font-weight-900;
+  font-family: $font-family-Awesome-Brands ;
 }
 .contact_social a:last-child {
   background-color: #e44c41; }
 .contact_social a:last-child:last-child:before {
   content: "\f0d5";
   display: inline-block;
-  font-family: $font-family-Awesome;
-  font-weight:$font-weight-900;
+  font-family: $font-family-Awesome-Brands ;
+
 }
 
 .btn-default {
